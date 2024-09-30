@@ -11,36 +11,50 @@
   >
     <!-- Navbar starts here  -->
 
-    <div class="p-2">
-      <nav
-        class="w-full flex flex-col text-white justify-evenly place-content-evenly p-2 gap-5"
-      >
+    <div class="p-2 relative">
+      <nav class="w-full flex flex-col text-white justify-evenly place-content-evenly p-2 gap-5">
+        <!-- Hamburger Menu for mobile view -->
         <div class="flex-none block sm:hidden">
-          <div
-            class="hamburger inline-block items-end justify-end place-content-end p-4"
-          >
+          <div id="hamburgerButton"
+            class="hamburger inline-block items-end justify-end place-content-end p-4 cursor-pointer">
             <div class="line h-0.5 w-6 bg-white my-1"></div>
             <div class="line h-0.5 w-6 bg-white my-1"></div>
             <div class="line h-0.5 w-6 bg-white my-1"></div>
           </div>
         </div>
-
+  
+        <!-- Links for larger screens -->
         <div class="p-2 w-40 hidden sm:block">
-          <div
-            class="flex flex-col sm:flex-row text-balance sm:space-x-5 font-bold sm:text-xl space-y-5 sm:space-y-0"
-            id="list"
-          >
+          <div class="flex flex-col sm:flex-row text-white sm:space-x-5 font-bold sm:text-xl space-y-5 sm:space-y-0"
+            id="list">
             <a class="cursor-pointer hover:underline" href="#About">About</a>
-            <a class="cursor-pointer hover:underline" href="#Experience"
-              >Experience</a
-            >
+            <a class="cursor-pointer hover:underline" href="#Experience">Experience</a>
             <a class="cursor-pointer hover:underline" href="#Skills">Skills</a>
-            <a class="cursor-pointer hover:underline" href="#Education"
-              >Education</a
-            >
+            <a class="cursor-pointer hover:underline" href="#Education">Education</a>
+            <a class="cursor-pointer hover:underline" href="#Certificates">Certificates</a>
           </div>
         </div>
       </nav>
+  
+      <!-- Sidebar for mobile view -->
+      <div id="sidebar"
+        class="fixed top-0 left-0 w-64 h-full bg-indigo-500 text-white transform -translate-x-full transition-transform duration-300 ease-in-out sm:hidden z-20">
+        <div class="p-4 flex justify-between items-center">
+          <h2 class="text-2xl font-semibold">Menu</h2>
+          <!-- Close Button -->
+          <button id="closeButton" class="text-white text-2xl font-bold">&times;</button>
+        </div>
+        <ul class="space-y-4 p-4">
+          <li><a href="#About" class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold">About</a></li>
+          <li><a href="#Experience" class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold">Experience</a></li>
+          <li><a href="#Skills" class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold">Skills</a></li>
+          <li><a href="#Education" class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold">Education</a></li>
+          <li><a href="#Certificates" class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold">Certificates</a></li>
+        </ul>
+      </div>
+  
+      <!-- Overlay to close sidebar when clicking outside -->
+      <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-10"></div>
     </div>
 
     <!-- Navbar ends here -->
@@ -79,11 +93,7 @@
           </div>
         </div>
         <div class="flex items-center place-content-center">
-          <img
-            class="h-full w-80 rounded-3xl"
-            src="img/profile.jpg"
-            alt=""
-          />
+          <img class="h-full w-80 rounded-3xl" src="img/profile.jpg" alt="" />
         </div>
       </div>
     </div>
@@ -1036,11 +1046,28 @@
     <!-- Footer section ends here -->
   </body>
 
-  <!-- <script>
-    let showresume = document
-      .getElementById("downloadresumebtn")
-      .addEventListener("click", function () {
-        alert("Footer clicked");
-      });
-  </script> -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const hamburgerButton = document.getElementById('hamburgerButton');
+    const overlay = document.getElementById('overlay');
+    const closeButton = document.getElementById('closeButton');
+
+    // Toggle Sidebar Functionality (Open)
+    hamburgerButton.addEventListener('click', () => {
+      sidebar.classList.toggle('-translate-x-full');
+      overlay.classList.toggle('hidden');
+    });
+
+    // Close Sidebar when clicking the close button
+    closeButton.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+
+    // Close Sidebar when clicking outside
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+  </script>
 </html>
