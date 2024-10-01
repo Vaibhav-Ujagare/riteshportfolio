@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <!-- <style>
+      @keyframes appear {
+        from {
+          opacity: 0;
+          scale: 0.5;
+        }
+        to {
+          opacity: 1;
+          scale: 1;
+        }
+      }
+
+      .block1 {
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0;
+      }
+    </style> -->
   </head>
   <body
     class="h-full w-full overflow-x-hidden text-black bg-gradient-to-r from-black to-blue-800"
@@ -12,48 +30,88 @@
     <!-- Navbar starts here  -->
 
     <div class="p-2 relative">
-      <nav class="w-full flex flex-col text-white justify-evenly place-content-evenly p-2 gap-5">
+      <nav
+        class="w-full flex flex-col text-white justify-evenly place-content-evenly p-2 gap-5"
+      >
         <!-- Hamburger Menu for mobile view -->
         <div class="flex-none block sm:hidden">
-          <div id="hamburgerButton"
-            class="hamburger inline-block items-end justify-end place-content-end p-4 cursor-pointer">
+          <div
+            id="hamburgerButton"
+            class="hamburger inline-block items-end justify-end place-content-end p-4 cursor-pointer"
+          >
             <div class="line h-0.5 w-6 bg-white my-1"></div>
             <div class="line h-0.5 w-6 bg-white my-1"></div>
             <div class="line h-0.5 w-6 bg-white my-1"></div>
           </div>
         </div>
-  
+
         <!-- Links for larger screens -->
         <div class="p-2 w-40 hidden sm:block">
-          <div class="flex flex-col sm:flex-row text-white sm:space-x-5 font-bold sm:text-xl space-y-5 sm:space-y-0"
-            id="list">
+          <div
+            class="flex flex-col sm:flex-row text-white sm:space-x-5 font-bold sm:text-xl space-y-5 sm:space-y-0"
+            id="list"
+          >
             <a class="cursor-pointer hover:underline" href="#About">About</a>
-            <a class="cursor-pointer hover:underline" href="#Experience">Experience</a>
+            <a class="cursor-pointer hover:underline" href="#Experience"
+              >Experience</a
+            >
             <a class="cursor-pointer hover:underline" href="#Skills">Skills</a>
-            <a class="cursor-pointer hover:underline" href="#Education">Education</a>
+            <a class="cursor-pointer hover:underline" href="#Education"
+              >Education</a
+            >
           </div>
         </div>
       </nav>
-  
+
       <!-- Sidebar for mobile view -->
-      <div id="sidebar"
-        class="fixed top-0 left-0 w-64 h-full bg-indigo-500 text-white transform -translate-x-full transition-transform duration-300 ease-in-out sm:hidden z-20">
+      <div
+        id="sidebar"
+        class="fixed top-0 left-0 w-64 h-full bg-indigo-500 text-white transform -translate-x-full transition-transform duration-300 ease-in-out sm:hidden z-20"
+      >
         <div class="p-4 flex justify-between items-center">
           <h2 class="text-2xl font-semibold">Menu</h2>
           <!-- Close Button -->
-          <button id="closeButton" class="text-white text-2xl font-bold">&times;</button>
+          <button id="closeButton" class="text-white text-2xl font-bold">
+            &times;
+          </button>
         </div>
         <ul class="space-y-4 p-4">
-          <li><a href="#About" class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold">About</a></li>
-          <li><a href="#Experience" class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold">Experience</a></li>
-          <li><a href="#Skills" class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold">Skills</a></li>
-          <li><a href="#Education" class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold">Education</a></li>
-       
+          <li>
+            <a
+              href="#About"
+              class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Experience"
+              class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Skills"
+              class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Education"
+              class="block p-2 hover:bg-indigo-600 rounded text-xl font-semibold"
+              >Education</a
+            >
+          </li>
         </ul>
       </div>
-  
+
       <!-- Overlay to close sidebar when clicking outside -->
-      <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-10"></div>
+      <div
+        id="overlay"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 z-10"
+      ></div>
     </div>
 
     <!-- Navbar ends here -->
@@ -102,8 +160,8 @@
 
     <!-- Experience section starts here -->
 
-    <div class="p-2 mt-5" id="Experience">
-      <div class="text-white mt-5 items-center flex flex-col p-2">
+    <div class="p-2 mt-5 view" id="Experience">
+      <div class="text-white mt-5 items-center flex flex-col p-2 block1">
         <div class="text-4xl font-bold text-blue-400 p-2">Experience</div>
         <!-- <div class="w-48 h-1 rounded-xl bg-indigo-300"></div> -->
         <section class="py-10 px-6">
@@ -135,9 +193,10 @@
                           CAKES N CHEMISTRY
                         </p>
                         <p
-                          class="text-gray-300 mt-2 font-medium  text-base text-center sm:text-start"
+                          class="text-gray-300 mt-2 font-medium text-base text-center sm:text-start"
                         >
-                          Duration:- June 2021 - Aug 2024 <br> (3 Years & 2 Months)
+                          Duration:- June 2021 - Aug 2024 <br />
+                          (3 Years & 2 Months)
                         </p>
                       </div>
                     </li>
@@ -248,650 +307,670 @@
 
     <!-- Skills Section start here -->
 
-    <div class="p-2 mt-5" id="Skills">
+    <div class="p-2 mt-5 view" id="Skills">
       <div class="text-white flex flex-col">
         <div
-          class="text-4xl font-bold text-blue-400 mt-2 p-2 place-content-center flex"
+          class="text-4xl font-bold text-blue-400 mt-2 p-2 place-content-center flex block1"
         >
           Skills
         </div>
-        <!-- <div class="w-24 h-1 rounded-xl bg-yellow-400"></div> -->
 
-        <div
-          class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2"
-        >
-          1. Fondant & Customised Cake
-        </div>
-        <div
-          class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center mt-10 w-full"
-        >
+        <div class="view">
           <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2 block1"
           >
-            <div class="">
-              <a href="Skills.html">
+            1. Fondant & Customised Cake
+          </div>
+          <div
+            class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center mt-10 w-full block1"
+          >
+            <!-- <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Fondant & customised cake/Fondant_Cake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Fondant Cake
+              </h1>
+            </div> -->
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer hover:text-black transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+              title="Click for more details"
+            >
+              <div class="">
+                <a href="Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Fondant & customised cake/Theam_Cake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Theme Cake
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Fondant & customised cake/Pre-cut_pastry_cake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Pre-cut Pastry Cake
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Fondant & customised cake/Wedding_cake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Wedding Cake
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
                 <img
                   class="h-32 w-32 rounded-lg"
-                  src="img/Fondant & customised cake/Fondant_Cake.jpg"
+                  src="img/Fondant & customised cake/Monogram_cake.jpg"
                   alt=""
                 />
-              </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Monogram Cake
+              </h1>
             </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Fondant Cake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Fondant & customised cake/Theam_Cake.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">Theme Cake</h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Fondant & customised cake/Pre-cut_pastry_cake.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Pre-cut Pastry Cake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Fondant & customised cake/Wedding_cake.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Wedding Cake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/Fondant & customised cake/Monogram_cake.jpg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Monogram Cake
-            </h1>
-          </div>
-        </div>
-
-        <div
-          class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2"
-        >
-          2. Cheese-Cakes
-        </div>
-        <div
-          class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center mt-10 w-full"
-        >
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Cheesecakes/Assorted_baked_cheesecake.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Assorted Baked Cheesecake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Cheesecakes/Belgium_chocolates_cold_cheesecake.png"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Belgim Chocolates Cold Cheescake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Cheesecakes/Blueberry_cold_cheesecake.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Blueberry Cold Cheesecake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Cheesecakes/Lemon_baked_cheesecake.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Lemon Baked Cheesecake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/Cheesecakes/Lotus_Biscoff_cold_cheesecake.jpg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Lotus Biscoff Cold Cheesecake
-            </h1>
           </div>
         </div>
 
-        <div
-          class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2"
-        >
-          3. Tea Cakes/Healthy Cakes
-        </div>
-        <div
-          class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center mt-10 w-full"
-        >
+        <div class="view">
           <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2 block1"
           >
-            <div class="">
-              <a href="dist/Skills.html">
+            2. Cheese-Cakes
+          </div>
+          <div
+            class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center mt-10 w-full block1"
+          >
+            <!-- <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Cheesecakes/Assorted_baked_cheesecake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Assorted Baked Cheesecake
+              </h1>
+            </div> -->
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Cheesecakes/Belgium_chocolates_cold_cheesecake.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Belgim Chocolates Cold Cheescake
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Cheesecakes/Blueberry_cold_cheesecake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Blueberry Cold Cheesecake
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Cheesecakes/Lemon_baked_cheesecake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Lemon Baked Cheesecake
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
                 <img
                   class="h-32 w-32 rounded-lg"
-                  src="img/Tea cakes-  healthy cakes/Banana_walnut_healthy_cake.jpg"
+                  src="img/Cheesecakes/Lotus_Biscoff_cold_cheesecake.jpg"
                   alt=""
                 />
-              </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Lotus Biscoff Cold Cheesecake
+              </h1>
             </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Banana Walnut Healthy Cake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Tea cakes-  healthy cakes/Belgium_chocolate_cake.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Belgium Chocolate Cake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Tea cakes-  healthy cakes/Double_chocolate_healthy_cake.png"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Double Chocolate Healty Cake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Tea cakes-  healthy cakes/Oats_&_cranberry_tea_cake.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Oats & Craneberry Tea Cake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/Tea cakes-  healthy cakes/Vanilla_Belgium_healthy_jaggery_cake.png"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Vanilla Belgium Healthy Jaggery Cake
-            </h1>
-          </div>
-        </div>
-
-        <div
-          class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2"
-        >
-          4. Cookies
-        </div>
-        <div
-          class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center mt-10 w-full"
-        >
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Cookies/Cheese_chilli_cookies.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Cheese Chilli Cookies
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Cookies/Coconut_oats_cookies.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Coconut Oats Cookies
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Cookies/Ginger_cookies.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Ginger Cookies
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Cookies/Triple_chocolate_chunk_cookies.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Triple Chocolate Chunk Cookies
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/Cookies/Vanilla_Belgium_chunk_cookies.jpg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Vanilla Belgium Chunk Cookies
-            </h1>
           </div>
         </div>
 
-        <div
-          class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2"
-        >
-          5. Brownie/Blondie
-        </div>
-        <div
-          class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center mt-10 w-full"
-        >
+        <div class="view">
           <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2 block1"
           >
-            <div class="">
-              <a href="dist/Skills.html">
+            3. Tea Cakes/Healthy Cakes
+          </div>
+          <div
+            class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center mt-10 w-full block1"
+          >
+            <!-- <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Tea cakes-  healthy cakes/Banana_walnut_healthy_cake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Banana Walnut Healthy Cake
+              </h1>
+            </div> -->
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Tea cakes-  healthy cakes/Belgium_chocolate_cake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Belgium Chocolate Cake
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Tea cakes-  healthy cakes/Double_chocolate_healthy_cake.png"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Double Chocolate Healty Cake
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Tea cakes-  healthy cakes/Oats_&_cranberry_tea_cake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Oats & Craneberry Tea Cake
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
                 <img
                   class="h-32 w-32 rounded-lg"
-                  src="img/Brownie-Blondie/Belgium_chocolate_&_walnut_blondie_brownie.jpg"
+                  src="img/Tea cakes-  healthy cakes/Vanilla_Belgium_healthy_jaggery_cake.png"
                   alt=""
                 />
-              </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Vanilla Belgium Healthy Jaggery Cake
+              </h1>
             </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Belgium Chocolate & Walnut Blondie Brownie
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Brownie-Blondie/Strawberry_white_chocolate_Blondie.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Strawberry White Chocolate Blondie
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Brownie-Blondie/White_chocolates_raspberry_Blondie.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              White Chocolate Raspberry Blondie
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Brownie-Blondie/Assorted_brownie.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Assorted Brownie
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/Brownie-Blondie/Plain_brownie.jpg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Plain Brownie
-            </h1>
-          </div>
-        </div>
-
-        <div
-          class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2"
-        >
-          6. Breads
-        </div>
-        <div
-          class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center mt-10 w-full"
-        >
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Breads/Korean_cheese_&_garlic_bread.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Korean Cheese & Gralic Bread
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Breads/Mini_baked_samosa.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Mini Baked Samosa
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Breads/Mini_pizzaa.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">Mini Pizza</h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Breads/Focaccia_bread.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Focaccia Bread
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/Breads/Pesto_roll.jpg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">Pesto Roll</h1>
           </div>
         </div>
 
-        <div
-          class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2"
-        >
-          7. Desserts/Cake Jars
+        <div class="view">
+          <div
+            class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2 block1"
+          >
+            4. Cookies
+          </div>
+          <div
+            class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center mt-10 w-full block1"
+          >
+            <!-- <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Cookies/Cheese_chilli_cookies.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Cheese Chilli Cookies
+              </h1>
+            </div> -->
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Cookies/Coconut_oats_cookies.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Coconut Oats Cookies
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Cookies/Ginger_cookies.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Ginger Cookies
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Cookies/Triple_chocolate_chunk_cookies.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Triple Chocolate Chunk Cookies
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <img
+                  class="h-32 w-32 rounded-lg"
+                  src="img/Cookies/Vanilla_Belgium_chunk_cookies.jpg"
+                  alt=""
+                />
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Vanilla Belgium Chunk Cookies
+              </h1>
+            </div>
+          </div>
         </div>
-        <div
-          class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-items-center mt-10 w-full"
-        >
+
+        <div class="view">
           <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2 block1"
           >
-            <div class="">
-              <a href="dist/Skills.html">
+            5. Brownie/Blondie
+          </div>
+          <div
+            class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center mt-10 w-full block1"
+          >
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Brownie-Blondie/Belgium_chocolate_&_walnut_blondie_brownie.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Belgium Chocolate & Walnut Blondie Brownie
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Brownie-Blondie/Strawberry_white_chocolate_Blondie.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Strawberry White Chocolate Blondie
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Brownie-Blondie/White_chocolates_raspberry_Blondie.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                White Chocolate Raspberry Blondie
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Brownie-Blondie/Assorted_brownie.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Assorted Brownie
+              </h1>
+            </div>
+
+            <!-- <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
                 <img
                   class="h-32 w-32 rounded-lg"
-                  src="img/Desserts-Cake_Jars/Kesar_modak_cupcake.jpg"
+                  src="img/Brownie-Blondie/Plain_brownie.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Kesar Modka Cupcake
-            </h1>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Plain Brownie
+              </h1>
+            </div> -->
           </div>
+        </div>
 
+        <div class="view">
           <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2 block1"
           >
-            <div class="">
-              <a href="dist/Skills.html">
+            6. Breads
+          </div>
+          <div
+            class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center mt-10 w-full block1"
+          >
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Breads/Korean_cheese_&_garlic_bread.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Korean Cheese & Gralic Bread
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Breads/Mini_baked_samosa.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Mini Baked Samosa
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Breads/Mini_pizzaa.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Mini Pizza
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Breads/Focaccia_bread.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Focaccia Bread
+              </h1>
+            </div>
+
+            <!-- <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
                 <img
                   class="h-32 w-32 rounded-lg"
-                  src="img/Desserts-Cake_Jars/Gulab_jamun_rabdi_square_cake_jar.jpg"
+                  src="img/Breads/Pesto_roll.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Gulab Jamun Rabdi Square Cake Jar
-            </h1>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Pesto Roll
+              </h1>
+            </div> -->
           </div>
+        </div>
 
+        <div class="view">
           <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            class="flex items-start text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-10 ml-10 p-2 block1"
           >
-            <div class="">
-              <a href="dist/Skills.html">
+            7. Desserts/Cake Jars
+          </div>
+          <div
+            class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center mt-10 w-full block1"
+          >
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Desserts-Cake_Jars/Kesar_modak_cupcake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Kesar Modka Cupcake
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Desserts-Cake_Jars/Gulab_jamun_rabdi_square_cake_jar.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Gulab Jamun Rabdi Square Cake Jar
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Desserts-Cake_Jars/Red_velvet_mini_cake.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Red Velvet Mini Cake
+              </h1>
+            </div>
+
+            <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
+                <a href="dist/Skills.html">
+                  <img
+                    class="h-32 w-32 rounded-lg"
+                    src="img/Desserts-Cake_Jars/Tiramisu_cake_jar.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Tiramisu Cake Jar
+              </h1>
+            </div>
+
+            <!-- <div
+              class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
+            >
+              <div class="">
                 <img
                   class="h-32 w-32 rounded-lg"
-                  src="img/Desserts-Cake_Jars/Red_velvet_mini_cake.jpg"
+                  src="img/Desserts-Cake_Jars/Cake_sickles.jpg"
                   alt=""
                 />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Red Velvet Mini Cake
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <a href="dist/Skills.html">
-                <img
-                  class="h-32 w-32 rounded-lg"
-                  src="img/Desserts-Cake_Jars/Tiramisu_cake_jar.jpg"
-                  alt=""
-                />
-              </a>
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Tiramisu Cake Jar
-            </h1>
-          </div>
-
-          <div
-            class="bg-black flex flex-col flex-wrap border-2 p-2 w-64 rounded-lg items-center mb-5 hover:cursor-pointer"
-          >
-            <div class="">
-              <img
-                class="h-32 w-32 rounded-lg"
-                src="img/Desserts-Cake_Jars/Cake_sickles.jpg"
-                alt=""
-              />
-            </div>
-            <h1 class="text-center text-2xl font-semibold mt-2">
-              Cake Sickles
-            </h1>
+              </div>
+              <h1 class="text-center text-2xl font-semibold mt-2">
+                Cake Sickles
+              </h1>
+            </div> -->
           </div>
         </div>
       </div>
@@ -900,8 +979,8 @@
     <!-- Skills section end here -->
 
     <!-- Education section starts here -->
-    <div class="p-2 mt-5" id="Education">
-      <div class="text-blue-400 mt-5 items-center flex flex-col">
+    <div class="p-2 mt-5 view" id="Education">
+      <div class="text-blue-400 mt-5 items-center flex flex-col block1">
         <div class="text-4xl font-bold text-whi mb-2">Education</div>
         <!-- <div class="w-44 h-1 rounded-xl bg-yellow-400"></div> -->
         <div class="py-5 mb-6 w-full px-6">
@@ -934,13 +1013,16 @@
                   </div>
                 </div>
                 <div class="py-2 px-1 text-lg text-gray-300 font-medium">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                  iusto in adipisci eius repellendus illo atque amet distinctio
-                  dolorem, dolore asperiores ipsa.
+                  I graduated with a Hotel Management degree from Ramanath
+                  Payyade College, where I studied core subjects like Food and
+                  Beverage, Housekeeping, Kitchen, and Front Office. I also
+                  specialized in Bakery, gaining advanced skills in pastry and
+                  dessert-making.
                 </div>
               </div>
             </div>
 
+            <!-- Blog Post 2 -->
             <div
               class="max-w-3xl sm:max-w-4xl mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm"
             >
@@ -965,9 +1047,11 @@
                   </div>
                 </div>
                 <div class="py-2 px-1 text-lg text-gray-300 font-medium">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                  iusto in adipisci eius repellendus illo atque amet distinctio
-                  dolorem, dolore asperiores ipsa.
+                  I completed a 5-month industrial training at Hotel Holiday Inn
+                  International Airport, Mumbai, where I gained practical
+                  experience in Bakery, Front Office, Housekeeping, and Food &
+                  Beverage. I worked alongside experienced professionals,
+                  handling a variety of tasks and challenges in each department.
                 </div>
               </div>
             </div>
@@ -978,56 +1062,52 @@
 
     <!-- Education section ends here -->
 
-  
     <!-- Footer section starts here -->
     <footer class="bg-slate-800 p-4 text-center text-white mt-10" id="footer">
       <p>&copy; 2024 Ritesh Ravindra Pakhare. All rights reserved.</p>
       <div class="flex justify-center gap-4 mt-4">
         <a
-          href="https://www.linkedin.com/in/vaibhav-ujagare/"
+          href="https://www.linkedin.com/in/ritesh-ravindra-pakhare-b2bb941b9"
           class="hover:text-gray-400"
           >LinkedIn</a
         >
-        <a href="https://github.com/Vaibhav-Ujagare" class="hover:text-gray-400"
-          >GitHub</a
+        <a href="mailto:riteshpakhare0@gmail.com" class="hover:text-gray-400"
+          >Email</a
         >
-        <a
-          href="https://leetcode.com/u/vaibhavujagare77/"
-          class="hover:text-gray-400"
-          >Leetcode</a
+        <a href="https://wa.me/+918879200954" class="hover:text-gray-400"
+          >WhatsApp</a
         >
-        <a
-          href="https://www.hackerrank.com/profile/vaibhavujagare77"
-          class="hover:text-gray-400"
-          >HackerRank</a
+        <a href="https://www.instagram.com/riteshpakhare/profilecard/?igsh=ZmNmdXhpdDV2MWt1" class="hover:text-gray-400"
+          >Instagram</a
         >
+        
       </div>
     </footer>
     <!-- Footer section ends here -->
   </body>
 
   <script>
-    const sidebar = document.getElementById('sidebar');
-    const hamburgerButton = document.getElementById('hamburgerButton');
-    const overlay = document.getElementById('overlay');
-    const closeButton = document.getElementById('closeButton');
+    const sidebar = document.getElementById("sidebar");
+    const hamburgerButton = document.getElementById("hamburgerButton");
+    const overlay = document.getElementById("overlay");
+    const closeButton = document.getElementById("closeButton");
 
     // Toggle Sidebar Functionality (Open)
-    hamburgerButton.addEventListener('click', () => {
-      sidebar.classList.toggle('-translate-x-full');
-      overlay.classList.toggle('hidden');
+    hamburgerButton.addEventListener("click", () => {
+      sidebar.classList.toggle("-translate-x-full");
+      overlay.classList.toggle("hidden");
     });
 
     // Close Sidebar when clicking the close button
-    closeButton.addEventListener('click', () => {
-      sidebar.classList.add('-translate-x-full');
-      overlay.classList.add('hidden');
+    closeButton.addEventListener("click", () => {
+      sidebar.classList.add("-translate-x-full");
+      overlay.classList.add("hidden");
     });
 
     // Close Sidebar when clicking outside
-    overlay.addEventListener('click', () => {
-      sidebar.classList.add('-translate-x-full');
-      overlay.classList.add('hidden');
+    overlay.addEventListener("click", () => {
+      sidebar.classList.add("-translate-x-full");
+      overlay.classList.add("hidden");
     });
   </script>
 </html>
