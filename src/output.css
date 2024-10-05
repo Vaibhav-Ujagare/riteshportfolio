@@ -728,6 +728,14 @@ video {
   width: 100%;
 }
 
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
 .max-w-3xl {
   max-width: 48rem;
 }
@@ -957,6 +965,10 @@ video {
 .bg-yellow-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-opacity-50 {
